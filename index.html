@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en" class="has-navbar-fixed-top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,
+           minimum-scale=1.0">
+    <title>Image-M8</title>
+    <link rel="stylesheet" href="css/bulma.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+    <style>
+        .app.is-large .app-body {
+            padding-bottom: 0;
+            padding-top: 10rem;
+        }
+        .app figure {
+            height: 0;
+            padding-bottom: 75%;
+            overflow: hidden;
+        }
+        figure.image {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        .bg-white {
+            background-color: #ffffff;
+        }
+        .bg-light {
+            background-color: #faf6fb;
+        }
+        .media-left {
+            padding-left: 15px;
+        }
+        .media-left .icon {
+            margin-top: 15px;
+
+        }
+        .media {
+            background-color: #ffffff;
+            padding: 25px;
+        }
+
+        .section {
+            padding: 7rem 5rem;
+        }
+
+        .content h1 {
+            margin-bottom: 2em;
+        }
+
+        #usage{
+            color: #ffffff;
+            background-image: linear-gradient( 135deg, rgb(39, 125, 109) 0%, rgb(0, 95, 77) 100%)
+        }
+
+        .app.is-landing {
+            color: #ffffff;
+            background-image: linear-gradient( 135deg, rgb(39, 125, 109) 0%, rgb(0, 95, 77) 100%)
+        }
+
+        .app.is-landing * {
+            color:black;
+        } 
+        .app-head{
+            background: white;
+        }
+        .yellow-text-active{
+            color:#ffcc23 !important;
+        }
+        .white-text{
+            color:#ffff !important;
+        }
+        .bold-text{
+            font-weight: bold;
+        }
+        .has-text-violet{
+            color:#811c98;
+        }
+        .has-text-red{
+            color:#ff4040
+        }
+        .bold-and-white{
+            color:white;
+            font-weight: bold;
+        }
+        .is-fixed-top{
+            background: white !important;
+        }
+        a:hover{
+            color: #ffcc23 !important;
+        }
+        .active-link{
+            color: #ffcc23 !important;
+        }
+        .padding-5{
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="content-wrapper">
+    <section class="app is-landing is-large">
+        <div class="app-head">
+            <nav class="navbar is-fixed-top">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item yellow-text" >
+                                Image-<span class='has-text-primary bold-text'>M8</span>
+                        </a>
+                        <span class="navbar-burger burger" data-target="mainNavbar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="mainNavbar" class="navbar-menu">
+                        <div id='navContainer' class="navbar-end">
+                            <a href="#home" class="navButtons navbar-item active-link">
+                                Home
+                            </a>
+                            <a class="navButtons navbar-item "   href="#downloads">
+                                Downloads
+                            </a>
+                            <a class="navButtons navbar-item "   href="#changelog">
+                                Changelog
+                            </a>
+                            <a  href="#how-to-use" class="navButtons navbar-item ">
+                                How to use 
+                            </a>
+                        </div>
+                        <script>
+                            var navContainer = document.getElementById("navContainer");
+                            var btns = navContainer.getElementsByClassName("navButtons");
+                            for (var i = 0; i < btns.length; i++) {
+                                btns[i].addEventListener("click", function() {
+                                  var current = document.getElementsByClassName("active-link");
+                                  console.log(current[0].className)
+                                  current[0].className = current[0].className.replace(" active-link", "");
+                                  this.className += " active-link";
+                                });
+                            }
+                        </script>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id='home' class="app-body">
+            <div  class="container has-text-centered">
+
+                <div class="columns" >
+                    <div class="column is-6 is-offset-3">
+                        <h1 class="title is-1 white-text">
+                           Image-M8
+                        </h1>
+                        <h2 class="subtitle is-4 white-text">
+                           Free and Open Source cross-platfrom tool for image compression 
+                           and resizing
+                        </h2>
+
+                        <figure class="image">
+                            <img src="img/imagem8_original.png" alt="" width="768">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-light" id='downloads'>
+        <div class="container section">
+            <div class="content has-text-centered">
+                <h1>Downloads</h1>
+            </div>
+
+            <nav class="columns">
+                    <div class="column has-text-centered">
+                            <article class="media">
+                                <div class="media-content">
+                                    <div class="content has-text-centered">
+                                            <h4 class="heading ">  
+                                                <i class="fab fa-windows has-text-info   fa-1x"></i> 
+                                                <strong>Windows</strong></h4>
+                                            <a class="button     is-outlined">
+                                                <span>Download for Windows </span>
+                                            </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                <div class="column has-text-centered">
+                    <article class="media">
+                        <div class="media-content">
+                            <div class="content has-text-centered">
+                                <h4 class="heading"> 
+                                    <i class="fab fa-apple has-text-success fa-1x"></i> 
+                                     <strong>MacOS</strong></h4>
+                                    <a class="button     is-outlined">
+                                        <span>Download for mac </span>
+                                    </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="column has-text-centered">
+                    <article class="media">
+                       
+                        <div class="media-content">
+                            <div class="content has-text-centered">
+                                <h4 class="heading">  <i class="fab fa-linux fa-1x"></i> 
+                                     <strong>Linux</strong></h4>
+                                <a class="button     is-outlined">
+                                    <span>Download for Linux </span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </nav>
+            <nav class="columns">
+                
+                <div class="column has-text-centered">
+                    <article class="media">                        
+                        <div class="media-content">
+                            <div class="content has-text-centered">
+                                    <h4 class="heading"> 
+                                        <i class="fab has-text-violet fa-google-play fa-1x"></i> 
+                                        <strong>Android</strong></h4>
+                                    <a disabled class="button is-outlined">
+                                        <span>Download for Android (comming soon) </span>
+                                    </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="column has-text-centered">
+                    <article class="media">
+                        
+                        <div class="media-content">
+                            <div class="content  has-text-centered">
+                                    <h4 class="heading"> 
+                                        <i class="fab has-text-red fa-app-store fa-1x"></i> 
+                                         <strong>iOS</strong></h4>
+                                    <a disabled class="button     is-outlined">
+                                        <span>Download for iOS (comming soon) </span>
+                                    </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
+  
+
+
+    <!--<section class="bg-white">
+        <div class="container section">
+            <div class="columns is-vcentered">
+                <div class="column">
+                    <figure class="image">
+                        <img src="img/iphonex.png" alt="">
+                    </figure>
+                </div>
+                <div class="column ">
+                        <div class="content">
+                            <h1>Discover your app</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, 
+                                debitis delectus doloribus dolorum eos est ex </p>
+
+                            <a href="" class="button is-danger">Discover</a>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section  class="bg-white" id='changelog'>
+        <div class="container section">
+            <div class="content has-text-centered">
+                <h1>Changelog</h1>
+            </div>
+
+            <div class="columns">
+                    <div class="column is-one-fifth">
+                        <div class="title is-4">Version 1.0.0</div>
+                        <p>March - 15 - 2019</p>
+                    </div>
+    
+                    <div class="column ">
+                        <div class="title is-4">Release</div>
+                        <p>Yeey it's finaly here</p>
+                    </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="usage" >
+        <div id='how-to-use' class="container section has-text-centered ">
+                <div class="column is-half is-offset-one-quarter"> 
+                    <h1 class="title  is-2" style='color:white'>How to Use</h1> 
+                </div>
+        </div>
+        <div class="container ">
+                <div class="columns">
+                        <div class="column is-one-fifth has-text-centered">
+                            <img src="img/imagem8_original.png" alt="" width="200">
+                        </div>
+        
+                        <div class="column ">
+                            <div class="title is-4 padding-5 yellow-text-active">Simple Compression</div>
+                            <p class='bold-and-white padding-5'>Choose an image or mupltiple images by 
+                                clicking on the button "choose image or images",
+                                choose your images that you want to compress. The output will be 
+                                in the same folder where 
+                            you have chosen your images with an extension _imagem8 </p>
+                        </div>
+                        
+                </div>
+
+                <div class="columns">
+                        <div class="column is-one-fifth has-text-centered">
+                            <img src="img/imagem8_custom.png" alt="" width="200">
+                        </div>
+        
+                        <div class="column ">
+                            <div class="title padding-5 is-4 yellow-text-active">Custom Width and Height 
+                                Compression</div>
+                            <p class='bold-and-white padding-5'>Choose custom from the dropdown, input your 
+                                dimensions and choose image  to resize</p>
+                        </div>
+                        
+                </div>
+                <div class="columns">
+                        <div class="column is-one-fifth has-text-centered">
+                            
+                            <img src="img/imagem8_width.png" alt="" width="100">
+                          
+                            
+                            <img src="img/imagem8_height.png" alt="" width="100">
+                            
+                        </div>
+                        <div class="column ">
+                            <div class="title is-4 yellow-text-active padding-5">Eather width or height</div>
+                            <p class='bold-and-white padding-5'>Choose from dropdown whant how you want the 
+                                scaleFactor to behave
+                                if you choose width the tool automaticly calculate the height so that
+                                 the aspect ratio is contained and you don't loose the image look.
+                            </p>
+                        </div>
+                </div>
+                
+                <div class="columns">
+                        <div class="column is-one-fifth has-text-centered padding-5">
+                            <img src="img/imagem8_slider.png" alt="" width="200">
+                        </div>  
+                        <div class="column ">
+                            <div class="title is-4 yellow-text-active padding-5">Quality slider</div>
+                            <p class='bold-and-white padding-5'>The Quality slider can be used to change 
+                                the quality
+                                of the image, For .png images it's used to resize them acordingly.
+                            </p>
+                        </div>
+                </div>
+
+                <div class="columns">
+                        <div class="column is-one-fifth has-text-centered padding-5">
+                            <img src="img/imagem8_chooseSave.png" alt="" width="200">
+                        </div>
+                        <div class="column ">
+                            <div class="title is-4 yellow-text-active padding-5 ">Choose save folder</div>
+                            <p class='bold-and-white padding-5'>Allows you to store the resized/compressed 
+                                images in 
+                                separate folder, they wil retain the same name.
+                            </p>
+                        </div>
+                </div>
+
+                <div class="columns">
+                        <div class="column is-one-fifth has-text-centered">
+                            <img src="img/imagem8_chooseSave.png" alt="" width="200">
+                        </div>
+                        <div class="column ">
+                            <div class="title is-4 yellow-text-active padding-5">Force Jpg</div>
+                            <p class='bold-and-white padding-5'>This option forces images to be compressed
+                                 to JPG format.
+                            </p>
+                        </div>
+                </div>
+        </div>
+ 
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    Tool built
+                    with
+                    <span class="icon has-text-danger">
+                        <i class="fas fa-heart"></i>
+                    </span>
+                    by <a target='_blank' href="https://github.com/nikolaDrangovski"> 
+                        <i class="fab fa-github-square"></i> Nikola</a>
+                    <span id='year'></span>
+                    <script type='text/javascript'>
+                          //  document.getElementById("year").innerHTML =new Date().getFullYear();
+                    </script>
+                </p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
