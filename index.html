@@ -129,16 +129,22 @@
                             <a  href="#how-to-use" class="navButtons navbar-item ">
                                 How to use 
                             </a>
+                            <a target='_blank' id='issue' href="https://github.com/nikolaDrangovski/imageM8/issues"
+                                    class="navButtons navbar-item ">
+                                    Crete an issue
+                            </a>
                         </div>
                         <script>
                             var navContainer = document.getElementById("navContainer");
                             var btns = navContainer.getElementsByClassName("navButtons");
                             for (var i = 0; i < btns.length; i++) {
                                 btns[i].addEventListener("click", function() {
-                                  var current = document.getElementsByClassName("active-link");
-                                  console.log(current[0].className)
-                                  current[0].className = current[0].className.replace(" active-link", "");
-                                  this.className += " active-link";
+                                    if(this.id != 'issue'){
+                                        var current = document.getElementsByClassName("active-link");
+                                        current[0].className = current[0].className.replace(" active-link", "");
+                                        this.className += " active-link";
+                                    }
+                                 
                                 });
                             }
                         </script>
@@ -198,8 +204,8 @@
                                 <h4 class="heading"> 
                                     <i class="fab fa-apple has-text-success fa-1x"></i> 
                                      <strong>MacOS</strong></h4>
-                                    <a class="button     is-outlined">
-                                        <span>Download for mac </span>
+                                    <a class="button  is-outlined" href='https://github.com/nikolaDrangovski/imageM8/releases/download/v0.0.1-beta/image-M8.dmg'>
+                                        <span>Download for mac (still in beta) </span>
                                     </a>
                             </div>
                         </div>
@@ -414,7 +420,15 @@
                         <i class="fab fa-github-square"></i> Nikola</a>
                     <span id='year'></span>
                     <script type='text/javascript'>
-                          //  document.getElementById("year").innerHTML =new Date().getFullYear();
+                         (function () {
+                                var burger = document.querySelector('.burger');
+                                var nav = document.querySelector('#' + burger.dataset.target);
+
+                                burger.addEventListener('click', function () {
+                                    burger.classList.toggle('is-active');
+                                    nav.classList.toggle('is-active');
+                                });
+                            })();
                     </script>
                 </p>
             </div>
